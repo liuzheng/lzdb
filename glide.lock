@@ -1,0 +1,8 @@
+hash: 159f5e8d3284c562af3ce30ae9db15a3ff8a23ffe09bbce56b1236346ae08500
+updated: 2017-09-10T12:20:55.329898002+08:00
+imports:
+- name: github.com/liuzheng712/golog
+  version: 7f0b4b2d7704fa02841bbac9ae8da760a4846275
+- name: github.com/op/go-logging
+  version: 970db520ece77730c7e4724c61121037378659d9
+devImports: []

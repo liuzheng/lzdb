@@ -1,0 +1,3 @@
+package: github.com/liuzheng712/lzdb
+import:
+- package: github.com/liuzheng712/golog
