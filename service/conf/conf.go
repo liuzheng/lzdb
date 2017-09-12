@@ -17,6 +17,7 @@ var (
 
 func init() {
 	flag.Parse()
+	log.Initial()
 
 	if *GenYaml {
 		GenerateYamlFile()
@@ -49,6 +50,7 @@ var Config ConfigStruct = ConfigStruct{
 	},
 	Grpc:GrpcConfig{
 		Port:5001,
+		Host:"127.0.0.1",
 	},
 }
 

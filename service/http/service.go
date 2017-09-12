@@ -17,7 +17,8 @@ func queryHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		log.Info("http", "%v\t%v\t%v", r.RemoteAddr,r.Method,r.RequestURI)
-		log.Debug("http", "%v ", r.Header)
+		log.Debug("http", "Header: %v ", r.Header)
+		log.Debug("http", "Cookies: %v ", r.Cookies())
 		fmt.Fprint(w, "xxx")
 	}
 }

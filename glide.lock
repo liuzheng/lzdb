@@ -1,8 +1,10 @@
 hash: 159f5e8d3284c562af3ce30ae9db15a3ff8a23ffe09bbce56b1236346ae08500
-updated: 2017-09-12T20:26:08.967499882+08:00
+updated: 2017-09-12T22:46:30.62406815+08:00
 imports:
 - name: github.com/liuzheng712/golog
-  version: 6505fe9554937eb51145d148846fc81fdb9f45ae
+  version: 54fe2e6525ef21eda356874a3b12c31ba613f021
 - name: github.com/op/go-logging
   version: 970db520ece77730c7e4724c61121037378659d9
+- name: gopkg.in/yaml.v2
+  version: eb3733d160e74a9c7e442f435eb3bea458e1d19f
 devImports: []
