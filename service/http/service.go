@@ -14,12 +14,19 @@ func router() {
 	http.HandleFunc("/query", queryHandler)
 }
 func queryHandler(w http.ResponseWriter, r *http.Request) {
+	log.Info("http", "%v\t%v\t%v", r.RemoteAddr, r.Method, r.RequestURI)
+	log.Debug("http", "Header: %v ", r.Header)
+	log.Debug("http", "Cookies: %v ", r.Cookies())
+	log.Debug("http", "Body: %v ", r.Body)
+
 	switch r.Method {
 	case "GET":
-		log.Info("http", "%v\t%v\t%v", r.RemoteAddr,r.Method,r.RequestURI)
-		log.Debug("http", "Header: %v ", r.Header)
-		log.Debug("http", "Cookies: %v ", r.Cookies())
 		fmt.Fprint(w, "xxx")
+	case "POST":
+		log.Debug("http", "Form: %v ", r.Form)
+		log.Debug("http", "PostForm: %v ", r.PostForm)
+
+
 	}
 }
 
