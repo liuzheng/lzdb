@@ -1,3 +1,8 @@
 package: github.com/liuzheng712/lzdb
 import:
 - package: github.com/liuzheng712/golog
+- package: github.com/shirou/gopsutil
+  subpackages:
+  - mem
+- package: gopkg.in/yaml.v2
+- package: github.com/pquerna/ffjson

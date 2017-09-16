@@ -14,15 +14,16 @@ func router() {
 	log.Debug("service.http.router", "%v", "load the Routers")
 	http.HandleFunc("/test", test)
 	http.HandleFunc("/query", queryHandler)
+	http.HandleFunc("/status", getstatus)
 }
 
-func httpHandler(w http.ResponseWriter) {
+func httpHandler(w http.ResponseWriter, r *http.Request) {
+	log.Info("http", "%v\t%v\t%v", r.RemoteAddr, r.Method, r.RequestURI)
 	w.Header().Set("Server", "LZDB Server")
 }
 
 func queryHandler(w http.ResponseWriter, r *http.Request) {
-	httpHandler(w)
-	log.Info("http", "%v\t%v\t%v", r.RemoteAddr, r.Method, r.RequestURI)
+	httpHandler(w, r)
 	log.Debug("http", "Header: %v ", r.Header)
 	log.Debug("http", "Cookies: %v ", r.Cookies())
 	log.Debug("http", "Body: %v ", r.Body)
@@ -44,8 +45,7 @@ func queryHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func test(w http.ResponseWriter, r *http.Request) {
-	httpHandler(w)
-	log.Info("http", "%v\t%v\t%v", r.RemoteAddr, r.Method, r.RequestURI)
+	httpHandler(w, r)
 
 	switch r.Method {
 	case "GET":

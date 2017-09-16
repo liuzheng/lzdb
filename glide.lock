@@ -1,10 +1,20 @@
-hash: 159f5e8d3284c562af3ce30ae9db15a3ff8a23ffe09bbce56b1236346ae08500
-updated: 2017-09-12T22:46:30.62406815+08:00
+hash: 8d78f94e33344410ba0ca9b49a303252f85bb0f8525cc3789117fcd0e85f9c8a
+updated: 2017-09-16T15:32:58.188953166+08:00
 imports:
 - name: github.com/liuzheng712/golog
-  version: 54fe2e6525ef21eda356874a3b12c31ba613f021
+  version: e3a6ba0392cdc06ffd1cd86f0d8eebe6465a2a59
 - name: github.com/op/go-logging
   version: 970db520ece77730c7e4724c61121037378659d9
+- name: github.com/pquerna/ffjson
+  version: 9a5203b7a07166f217f5f8177d5b16177acad3b2
+  subpackages:
+  - ffjson
+  - fflib/v1
+  - fflib/v1/internal
+- name: github.com/shirou/gopsutil
+  version: 084e5f47b47ee4dce70b1cafa83c13027e9e9483
+  subpackages:
+  - mem
 - name: gopkg.in/yaml.v2
   version: eb3733d160e74a9c7e442f435eb3bea458e1d19f
 devImports: []
