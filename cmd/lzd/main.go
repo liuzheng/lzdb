@@ -4,6 +4,6 @@ import (
 	"github.com/liuzheng712/lzdb/service/http"
 )
 
-func main()  {
+func main() {
 	http.Run()
 }

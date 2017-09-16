@@ -15,3 +15,5 @@
 .idea/
 vendor/
 cmd/lzd/lzd
+cmd/lzcli/
+test/
